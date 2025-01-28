@@ -1,5 +1,6 @@
 const express = require('express')
 require('dotenv').config()
+const shajs = require('sha.js')
 const app = express()
 const port = process.env.PORT || 3000;  
 const bodyParser = require('body-parser')
@@ -23,6 +24,8 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
+
+console.log(shajs('sha256').update('cat').digest('hex')); 
 
 async function run() {
   try {
