@@ -39,8 +39,27 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+// run().catch(console.dir);
 
+async function getData() {
+
+  await client.connect(); 
+  let collection = await client.db("guitar-app-database").collection("guitar-app-songs"); 
+ 
+  let results = await collection.find({}).toArray(); 
+    
+  console.log(results); 
+  return results; 
+
+}
+
+app.get('/read', async function (req, res) {
+  let getDataResults = await getData(); 
+  console.log(getDataResults); 
+  res.render('songs', 
+    { songData : getDataResults} ); 
+
+})
 
 
 
