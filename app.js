@@ -61,6 +61,53 @@ app.get('/read', async function (req, res) {
 
 })
 
+// app.post('/insert', async (req,res)=> {
+app.get('/insert', async (req,res)=> {
+
+
+  console.log('in /insert');
+  
+  // let newSong = req.body.newSong; //only for POST, GET is req.params? 
+
+  //connect to db,
+  await client.connect();
+  //point to the collection 
+  await client.db("guitar-app-database").collection("guitar-app-songs").insertOne({ song: "square one"});
+  res.redirect('/');
+
+}); 
+
+app.post('/update', async (req,res)=>{
+
+  console.log("req.body: ", req.body)
+
+  client.connect; 
+  const collection = client.db("barrys-db").collection("whatever-collection");
+  let result = await collection.findOneAndUpdate( 
+  {"_id": new ObjectId(req.body.nameID)}, { $set: {"fname": req.body.inputUpdateName } }
+)
+.then(result => {
+  console.log(result); 
+  res.redirect('/');
+})
+}); 
+
+app.post('/delete/:id', async (req,res)=>{
+
+  console.log("in delete, req.parms.id: ", req.params.id)
+
+  client.connect; 
+  const collection = client.db("barrys-db").collection("whatever-collection");
+  let result = await collection.findOneAndDelete( 
+  {"_id": new ObjectId(req.params.id)}).then(result => {
+  console.log(result); 
+  res.redirect('/');})
+
+  
+
+})
+
+
 
 
 //begin all my middlewares
