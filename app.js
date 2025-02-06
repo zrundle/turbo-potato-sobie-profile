@@ -4,6 +4,7 @@ const shajs = require('sha.js')
 const app = express()
 const port = process.env.PORT || 3000;  
 const bodyParser = require('body-parser')
+const { ObjectId } = require('mongodb')
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = process.env.MONGO_URI;
 
@@ -87,13 +88,14 @@ app.post('/update', async (req,res)=>{
   console.log("req.body: ", req.body)
 
   client.connect; 
-  const collection = client.db("barrys-db").collection("whatever-collection");
+  const collection = client.db("guitar-app-database")
+  .collection("guitar-app-songs");
   let result = await collection.findOneAndUpdate( 
   {"_id": new ObjectId(req.body.nameID)}, { $set: {"fname": req.body.inputUpdateName } }
 )
 .then(result => {
   console.log(result); 
-  res.redirect('/');
+  res.redirect('/read');
 })
 }); 
 
@@ -102,11 +104,15 @@ app.post('/delete/:id', async (req,res)=>{
   console.log("in delete, req.parms.id: ", req.params.id)
 
   client.connect; 
-  const collection = client.db("barrys-db").collection("whatever-collection");
+  const collection = client.db("guitar-app-database")
+  .collection("guitar-app-songs");
   let result = await collection.findOneAndDelete( 
-  {"_id": new ObjectId(req.params.id)}).then(result => {
+    {
+      "_id": new ObjectId(req.params.id)
+    }
+  ).then(result => {
   console.log(result); 
-  res.redirect('/');})
+  res.redirect('/read');})
 
   
 
