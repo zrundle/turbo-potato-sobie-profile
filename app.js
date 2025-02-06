@@ -61,19 +61,24 @@ app.get('/read', async function (req, res) {
 
 })
 
-// app.post('/insert', async (req,res)=> {
-app.get('/insert', async (req,res)=> {
-
+app.post('/insert', async (req,res)=> {
+// app.get('/insert', async (req,res)=> {
 
   console.log('in /insert');
   
-  // let newSong = req.body.newSong; //only for POST, GET is req.params? 
+  let newSong = req.body.myName; //only for POST, GET is req.params? 
+  // let newSong = req.query.myName;
+  console.log(newSong);
 
   //connect to db,
   await client.connect();
   //point to the collection 
-  await client.db("guitar-app-database").collection("guitar-app-songs").insertOne({ song: "square one"});
-  res.redirect('/');
+  await client
+    .db("guitar-app-database")
+    .collection("guitar-app-songs")
+    .insertOne({ whatthewhatever: newSong});
+
+  res.redirect('/read');
 
 }); 
 
