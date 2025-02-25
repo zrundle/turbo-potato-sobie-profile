@@ -7,13 +7,17 @@ DEV OPS = plan, code, build, test / release, deploy, operate, monitor
 
 DEV JIG "PKG"
 
-1/ 
+1/ as an outsider, oss contributor, issue=>fork=>code=>pr=>[await bc merge]=>done.
+
+PROOF: https://github.com/barrycumbie/turbo-potato-sobie-profile/blob/main/docs/milly.html
 
 2/ as a repo collab: issue=>branch=>code=>pr=>reviewed=>[resolve conflict]=>merge.
 
 PR 89 = https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/89/
 
-TEST JIG 2 <img width="396" alt="image" src="https://github.com/user-attachments/assets/932232f1-b40a-4315-b6c9-3acb1c1965a6" />
+TEST JIG 2 PROOF:
+<img width="363" alt="image" src="https://github.com/user-attachments/assets/1fdd19c6-c8df-4889-a0bc-060082c0cdd6" />
+
 
 
 3/ code review, 
