@@ -30,11 +30,11 @@ PROOF: https://github.com/barrycumbie/turbo-potato-sobie-profile/blob/main/docs/
 PR 90 = https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/90
 
 TEST JIG 2 PROOF:
-<img width="363" alt="image" src="https://github.com/user-attachments/assets/1fdd19c6-c8df-4889-a0bc-060082c0cdd6" />
+<img width="363" alt="image" src="https://github.com/user-attachments/assets/b4273e24-46f6-48aa-b96f-99a68edbdfc0" />
 
 
 
 3/ code review, 
 
-reviewed pr88 https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/88#pullrequestreview-2625219169
+reviewed pr110 https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/110
 
