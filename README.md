@@ -21,13 +21,13 @@ DEV JIG "PKG"
 
 1/ as an outsider, oss contributor, issue=>fork=>code=>pr=>[await bc merge]=>done.
 
-https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/90
+https://github.com/barrycumbie/turbo-potato-sobie-profile/issues/84
 
 PROOF: https://github.com/barrycumbie/turbo-potato-sobie-profile/blob/main/docs/zach.html
 
 2/ as a repo collab: issue=>branch=>code=>pr=>reviewed=>[resolve conflict]=>merge.
 
-PR 89 = https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/89/
+PR 89 = https://github.com/barrycumbie/turbo-potato-sobie-profile/pull/90
 
 TEST JIG 2 PROOF:
 <img width="363" alt="image" src="https://github.com/user-attachments/assets/1fdd19c6-c8df-4889-a0bc-060082c0cdd6" />
